@@ -1,6 +1,7 @@
 using NUnit.Framework;
 using Unity.Mathematics;
 using UnityEngine;
+using System.Collections;
 
 public class Charactermovement : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class Charactermovement : MonoBehaviour
     public Vector3 viewdirection {get ; set;}
     
     public float SpeedMultiplier { get; set; } = 1f;
+
     private void Awake()
     {
         _chacatercont = GetComponent<CharacterController>();
@@ -45,4 +47,6 @@ public class Charactermovement : MonoBehaviour
            transform.rotation = Quaternion.Slerp(transform.rotation,tagerrotat,rotationspeed *Time.deltaTime);
         }
     }
+
+
 }

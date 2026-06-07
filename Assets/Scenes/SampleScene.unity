@@ -272,6 +272,56 @@ MonoBehaviour:
   _fullsecption: {x: 0.26, y: 8.64, z: -9.99}
   _rotainsecption: {x: 0.14, y: 1.45, z: 0.04}
   taget: {fileID: 907330229}
+--- !u!1 &408611128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 408611130}
+  - component: {fileID: 408611129}
+  m_Layer: 0
+  m_Name: Riflespawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &408611129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408611128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b1318fb7fba846b7d7a5db4520a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnPickup
+  _pickupPrefab: {fileID: -1049303806086859018, guid: 7943ebb7eba0aa84aa75e43dc43ee077, type: 3}
+  _spawnRadius: 4
+  _spawnedPickupCount: 2
+  _respawnTime: 5
+  _minRespawnTime: 10
+  _maxRespawnTime: 30
+--- !u!4 &408611130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 408611128}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.70834, y: 0.59, z: -1.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6576d984dbcdf3045b726280a19c67ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyconrtootllerScript
-  _weaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
+  _baseweaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
   _hand: {fileID: 1213273110}
   _heal: 10
 --- !u!114 &423128778
@@ -576,6 +626,56 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &547361059
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547361061}
+  - component: {fileID: 547361060}
+  m_Layer: 0
+  m_Name: Riflespawner (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &547361060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547361059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b1318fb7fba846b7d7a5db4520a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnPickup
+  _pickupPrefab: {fileID: 6124429724268324163, guid: 4ff410b144989494fa63c623025633db, type: 3}
+  _spawnRadius: 2
+  _spawnedPickupCount: 2
+  _respawnTime: 4
+  _minRespawnTime: 2
+  _maxRespawnTime: 10
+--- !u!4 &547361061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547361059}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.82, y: 0.49, z: -10.34}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,7 +886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aca9f4f29b399d647a5f6c0e80f0f905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Playercontroller
-  _weaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
+  _baseweaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
   _hand: {fileID: 924193568}
   _heal: 10
   _sprintMultiplier: 2
@@ -1092,6 +1192,156 @@ Transform:
   m_Children: []
   m_Father: {fileID: 423128776}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1647230012
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1647230014}
+  - component: {fileID: 1647230013}
+  m_Layer: 0
+  m_Name: Riflespawner (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1647230013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647230012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b1318fb7fba846b7d7a5db4520a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnPickup
+  _pickupPrefab: {fileID: -1049303806086859018, guid: 7943ebb7eba0aa84aa75e43dc43ee077, type: 3}
+  _spawnRadius: 4
+  _spawnedPickupCount: 2
+  _respawnTime: 5
+  _minRespawnTime: 2
+  _maxRespawnTime: 15
+--- !u!4 &1647230014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647230012}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.79, y: 0.37, z: -1.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1871568394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1871568396}
+  - component: {fileID: 1871568395}
+  m_Layer: 0
+  m_Name: Riflespawner (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1871568395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871568394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b1318fb7fba846b7d7a5db4520a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnPickup
+  _pickupPrefab: {fileID: 4582787566154726535, guid: edf64cdb131325849b1143d903180040, type: 3}
+  _spawnRadius: 2
+  _spawnedPickupCount: 2
+  _respawnTime: 5
+  _minRespawnTime: 2
+  _maxRespawnTime: 15
+--- !u!4 &1871568396
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871568394}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.79, y: 0.17, z: -18.55}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1939296762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1939296764}
+  - component: {fileID: 1939296763}
+  m_Layer: 0
+  m_Name: Riflespawner (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1939296763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939296762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03b1318fb7fba846b7d7a5db4520a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::spawnPickup
+  _pickupPrefab: {fileID: 4582787566154726535, guid: edf64cdb131325849b1143d903180040, type: 3}
+  _spawnRadius: 2
+  _spawnedPickupCount: 2
+  _respawnTime: 5
+  _minRespawnTime: 2
+  _maxRespawnTime: 15
+--- !u!4 &1939296764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939296762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.9, y: 0.17, z: -19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998143736
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6576d984dbcdf3045b726280a19c67ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::enemyconrtootllerScript
-  _weaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
+  _baseweaponprefab: {fileID: 6914831870226868302, guid: bc2ca94ce78e63141a546c5edbf2ebd5, type: 3}
   _hand: {fileID: 1998143737}
   _heal: 10
 --- !u!114 &2059892363
@@ -1539,3 +1789,8 @@ SceneRoots:
   - {fileID: 907330229}
   - {fileID: 423128776}
   - {fileID: 2059892368}
+  - {fileID: 408611130}
+  - {fileID: 1647230014}
+  - {fileID: 1939296764}
+  - {fileID: 1871568396}
+  - {fileID: 547361061}

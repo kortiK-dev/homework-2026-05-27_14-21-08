@@ -8,7 +8,7 @@ public abstract class basecharacter : MonoBehaviour
 {
 
     [SerializeField]
-    private weapon _weaponprefab;
+    private weapon _baseweaponprefab;
     [SerializeField]
     private Transform _hand;
     protected Charactermovement _Charactermovement;
@@ -25,7 +25,7 @@ public abstract class basecharacter : MonoBehaviour
 
     protected void Start()
     {
-        _shootingcontrooller.SetWeapon(_weaponprefab, _hand);
+        SetWeapon(_baseweaponprefab);
     }
     protected void Update()
     {
@@ -43,7 +43,12 @@ public abstract class basecharacter : MonoBehaviour
         if(_heal <= 0f )
         Destroy(gameObject);
     }
-     protected abstract Vector3 GetMovmentDire();
+
+    public void SetWeapon(weapon weaponPrefab)
+    {
+        _shootingcontrooller.SetWeapon(weaponPrefab, _hand);
+    }
+    protected abstract Vector3 GetMovmentDire();
     protected void OnTriggerEnter(Collider other)
     {
         if(Layer.Inbullet(other.gameObject))
@@ -52,6 +57,15 @@ public abstract class basecharacter : MonoBehaviour
             _heal -= bullet.Damage;
             Destroy(bullet.gameObject);
         }
+    else if(Layer.InPickUp(other.gameObject)) 
+{
+    var pickup = other.GetComponent<PickUpitem>();
+    if(pickup != null)
+    {
+        pickup.PickUp(this);
+        Destroy(other.gameObject);
+    }
+}
     }
     protected void OnDrawGizmos()
     {
@@ -59,5 +73,20 @@ public abstract class basecharacter : MonoBehaviour
         Gizmos.DrawCube(_hand.position , new Vector3(0.2f,0.2f,0.2f));
     }
 
+   public void ApplySpeedBoost(float multiplier, float duration)
+{
+    StartCoroutine(SpeedBoostCoroutine(multiplier, duration));
+}
+
+private System.Collections.IEnumerator SpeedBoostCoroutine(float multiplier, float duration)
+{
    
+    _Charactermovement.SpeedMultiplier = multiplier;
+    
+   
+    yield return new WaitForSeconds(duration);
+    
+   
+    _Charactermovement.SpeedMultiplier = 1f;
+}
 }
