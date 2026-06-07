@@ -14,7 +14,7 @@ public class shootingcontrooller : MonoBehaviour
             return Vector3.zero;
         }
     }
-    private weapon _weapon;
+    private weapon _weapon = null;
 
     private float _nextshoottime;
 
@@ -38,9 +38,14 @@ public class shootingcontrooller : MonoBehaviour
     }
     public void SetWeapon(weapon weaponprefab, Transform hand)
     {
+        if(_weapon != null)
+        {
+            Destroy(_weapon.gameObject);
+        }
+
         _weapon = Instantiate(weaponprefab, hand);
         _weapon.transform.localPosition =  Vector3.zero;
-        _weapon.transform.localRotation = Quaternion.identity;
+        _weapon.transform.localRotation = weaponprefab.transform.localRotation;
     }
 
     private GameObject Gettarget()
